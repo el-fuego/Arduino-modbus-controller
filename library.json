@@ -1,0 +1,17 @@
+{
+  "name": "Arduino-modbus-controller",
+  "keywords": "modbus, arduino, nano, mega, library, devices, sensors, rs485, openhab",
+  "description": "Provide simple interface to create room-controller sketches using modbus registers (for OpenHAB or other home automations)",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/el-fuego/Arduino-modbus-controller.git"
+  },
+  "authors": {
+    "name": "Yuriy Pulyaev",
+    "url": "https://github.com/el-fuego"
+  },
+  "version": "0.2.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
