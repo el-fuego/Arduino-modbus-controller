@@ -2,7 +2,7 @@
 #define ANALOG_OUTPUT_PIN_UPDATER
 
 #include <inttypes.h>
-#include "./RegisterUpdater.h"
+#include "../RegisterUpdater.h"
 
 
 /**
@@ -11,7 +11,7 @@
 class AnalogOutputPin: public RegisterUpdater {
   private:
     uint8_t pin;
-    
+
   public:
     AnalogOutputPin(uint8_t _pin);
 

@@ -2,7 +2,7 @@
 #define DIGITAL_OUTPUT_PIN_UPDATER
 
 #include <inttypes.h>
-#include "./BitUpdater.h"
+#include "../BitUpdater.h"
 
 
 /**
@@ -11,7 +11,7 @@
 class DigitalOutputPin: public BitUpdater {
   private:
     uint8_t pin;
-    
+
   public:
     DigitalOutputPin(uint8_t _pin);
 
