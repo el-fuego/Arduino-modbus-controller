@@ -9,7 +9,7 @@
 class Si7021_Base: public RegisterUpdater {
   protected:
     Si7021_PinData* pinData;
-    unsigned long lastUpdateTime;
+    unsigned long lastUpdateTimeMs;
 
   public:
     Si7021_Base(Si7021_PinData* _pinData);

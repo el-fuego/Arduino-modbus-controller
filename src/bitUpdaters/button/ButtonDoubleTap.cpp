@@ -8,9 +8,9 @@ void ButtonDoubleTap::update(uint16_t* registerData, char bitIndex) {
 
   if (
     !pinData->isEventCatched &&
-    pinData->pressEndTime != 0 &&
+    pinData->pressEndTimeMs != 0 &&
     isPressed &&
-    millis() - pinData->pressEndTime < BUTTON_TAP_TIMEOUT
+    millis() - pinData->pressEndTimeMs < BUTTON_TAP_TIMEOUT_MS
   ) {
     writeEvent(registerData, bitIndex);
   }

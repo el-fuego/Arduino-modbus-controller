@@ -8,11 +8,11 @@ void ButtonTap::update(uint16_t* registerData, char bitIndex) {
 
   if (
     !pinData->isEventCatched &&
-    pinData->pressStartTime != 0 &&
-    pinData->pressEndTime != 0 &&
-    static_cast<long>(pinData->pressEndTime - pinData->pressStartTime) > BUTTON_MIN_TAP_TIME &&
+    pinData->pressStartTimeMs != 0 &&
+    pinData->pressEndTimeMs != 0 &&
+    static_cast<long>(pinData->pressEndTimeMs - pinData->pressStartTimeMs) > BUTTON_MIN_TAP_TIME_MS &&
     !isPressed &&
-    millis() - pinData->pressEndTime > BUTTON_TAP_TIMEOUT
+    millis() - pinData->pressEndTimeMs > BUTTON_TAP_TIMEOUT_MS
   ) {
     writeEvent(registerData, bitIndex);
   }

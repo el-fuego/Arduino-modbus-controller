@@ -7,7 +7,7 @@
 
 /**
 * Write digital value from Arduino pin to register
-* pressed after previous press in < BUTTON_TAP_TIMEOUT
+* pressed after previous press in < BUTTON_TAP_TIMEOUT_MS
 **/
 class ButtonDoubleTap: public ButtonBase {
   public:

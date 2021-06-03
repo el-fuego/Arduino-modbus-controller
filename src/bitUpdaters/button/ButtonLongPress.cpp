@@ -9,9 +9,9 @@ void ButtonLongPress::update(uint16_t* registerData, char bitIndex) {
   if (
     !pinData->isEventCatched &&
     isPressed &&
-    pinData->pressStartTime != 0 &&
-    pinData->pressEndTime == 0 &&
-    millis() - pinData->pressStartTime > BUTTON_LONG_PRESS_TIME
+    pinData->pressStartTimeMs != 0 &&
+    pinData->pressEndTimeMs == 0 &&
+    millis() - pinData->pressStartTimeMs > BUTTON_LONG_PRESS_TIME_MS
   ) {
     writeEvent(registerData, bitIndex);
   }

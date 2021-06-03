@@ -6,9 +6,9 @@
 #include "./ButtonPinData.h"
 
 
-#define BUTTON_MIN_TAP_TIME 3
-#define BUTTON_LONG_PRESS_TIME 1000
-#define BUTTON_TAP_TIMEOUT 300
+#define BUTTON_MIN_TAP_TIME_MS 3
+#define BUTTON_LONG_PRESS_TIME_MS 1000
+#define BUTTON_TAP_TIMEOUT_MS 300
 
 /**
 * Write digital value from Arduino pin to register

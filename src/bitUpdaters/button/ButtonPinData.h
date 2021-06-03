@@ -6,8 +6,8 @@
 
 struct ButtonPinData {
   uint8_t pin;
-  unsigned long pressStartTime = 0;
-  unsigned long pressEndTime = 0;
+  unsigned long pressStartTimeMs = 0;
+  unsigned long pressEndTimeMs = 0;
   bool isEventCatched = false;
   bool isInited = false;
   ButtonPinData(uint8_t _pin);

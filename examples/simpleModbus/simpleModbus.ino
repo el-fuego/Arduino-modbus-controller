@@ -17,7 +17,7 @@ void setup() {
   bitsRegister->addBit(new DigitalInputPin(2));
   // 1 bit at 0 register
   bitsRegister->addBit(new DigitalOutputPin(3));
-  
+
   // 1 register
   controller.addRegister(new AnalogInputPin(A1));
   // 2 register
@@ -27,7 +27,9 @@ void setup() {
 }
 
 void loop() {
+  // update registers from Modbus
   modbus.poll(controller.registerData, REGISTERS_COUNT);
 
+  // update registers from sensors
   controller.update();
 }

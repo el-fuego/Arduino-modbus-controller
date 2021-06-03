@@ -7,7 +7,7 @@
 
 /**
 * Write digital value from Arduino pin to register
-* hold longer then BUTTON_LONG_PRESS_TIME
+* hold longer then BUTTON_LONG_PRESS_TIME_MS
 **/
 class ButtonLongPress: public ButtonBase {
   public:

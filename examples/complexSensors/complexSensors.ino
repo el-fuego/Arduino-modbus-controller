@@ -15,7 +15,7 @@ Si7021_PinData si7021PinData; // temperature and humidity sensor on I2C
 DeviceAddress firstTemperatureSensorAddress = { 0x28, 0x1D, 0x39, 0x31, 0x2, 0x0, 0x0, 0xF0 };
 DeviceAddress secondTemperatureSensorAddress = { 0x30, 0x1D, 0x39, 0x31, 0x2, 0x0, 0x0, 0xF0 };
 
-unsigned long lastPrintTime = 0; // Used for debug only
+unsigned long lastPrintTimeMs = 0; // Used for debug only
 
 void setup() {
   Serial.begin(115200); // Used for debug only
@@ -26,7 +26,7 @@ void setup() {
   bitsRegister->addBit(new ButtonTap(&buttonPinData));
   bitsRegister->addBit(new ButtonDoubleTap(&buttonPinData));
   bitsRegister->addBit(new ButtonLongPress(&buttonPinData));
-  
+
   controller.addRegister(new Si7021_Temperature(&si7021PinData));
   controller.addRegister(new Si7021_Humidity(&si7021PinData));
   controller.addRegister(new OneWireTemperature(&temperaturePinData, firstTemperatureSensorAddress));
@@ -38,9 +38,9 @@ void setup() {
 void loop() {
   controller.update();
 
-  // Used for debug only
-  if (millis() - lastPrintTime > 500) {
-    lastPrintTime = millis();
+  // Condition is used for the debug only
+  if (millis() - lastPrintTimeMs > 500) {
+    lastPrintTimeMs = millis();
     Serial.println(bitRead(controller.registerData[0], 0));
     Serial.println(bitRead(controller.registerData[0], 1));
     Serial.println(bitRead(controller.registerData[0], 2));

@@ -4,7 +4,7 @@
 #include <inttypes.h>
 #include "./Si7021_Base.h"
 
-#define SI7021_TEMPERATURE_UPDATE_INTERVAL 1000
+#define SI7021_TEMPERATURE_UPDATE_INTERVAL_MS 1000
 
 /**
 * Write analog value from Arduino pin to register
